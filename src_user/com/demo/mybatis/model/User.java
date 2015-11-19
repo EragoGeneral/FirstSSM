@@ -6,7 +6,8 @@ public class User {
 	private String userName;
 	private int userAge;
 	private String userAddress;
-
+	private String testAttr;
+	
 	public int getId() {
 		return id;
 	}
@@ -39,4 +40,11 @@ public class User {
 		this.userAddress = userAddress;
 	}
 
+	public String getTestAttr() {
+		return testAttr;
+	}
+
+	public void setTestAttr(String testAttr) {
+		this.testAttr = testAttr;
+	}
 }

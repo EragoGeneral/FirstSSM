@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h2>Tree Lines</h2>
 	<div style="margin:10px 0;"></div>
 	<div class="easyui-panel" style="padding:5px">
-		<ul class="easyui-tree" data-options="url:'<%=basePath%>/article/loadTree.json',method:'get',animate:true,lines:true,checkbox:true"></ul>
+		<ul class="easyui-tree" data-options="url:'<%=basePath%>/article/loadTree.json',method:'get',animate:true,lines:true"></ul>
 	</div>
   </body>
 </html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.demo.mybatis.inter.IMenuOperation">
+		
+	<resultMap type="Menu" id="resultListMenu">
+        <id column="id" property="ID" />
+        <result column="name" property="name" />
+        <result column="link" property="link" />
+        <result column="parent_id" property="parentID" />
+    </resultMap>
+    
+    <select id="querySystemMenus"  resultMap="resultListMenu">
+        select * from system_menus where is_deleted = '0'
+        order by level, display_order
+    </select>
+	
+</mapper>

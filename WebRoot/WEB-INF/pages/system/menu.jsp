@@ -3,13 +3,13 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'list.jsp' starting page</title>
+    <title>My JSP 'info.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,13 +23,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-     <c:forEach items="${articles}" var="item">  
-        ${item.id}--${item.title}--${item.content}<br />
-    </c:forEach>
-    <img alt="" src="<%=basePath%>/static/201212142129136129.jpg" />
+    This is a test page. <br>
+    ${name}
     
-    <c:forEach items="${users}" var="item">  
-        ${item.id}--${item.userName}--${item.userAge}<br />
-    </c:forEach>
+    <h2>Tree Lines</h2>
+	<div style="margin:10px 0;"></div>
+	<div class="easyui-panel" style="padding:5px">
+		<ul class="easyui-tree" data-options="url:'<%=basePath%>/system/menus.json',method:'get',animate:true,lines:true"></ul>
+	</div>
+	
   </body>
 </html>

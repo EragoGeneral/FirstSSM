@@ -7,7 +7,6 @@
 		select * from `user` where id = #{id}
 	</select>
 	
-	
 	<resultMap type="User" id="resultListUser">
         <id column="id" property="id" />
         <result column="userName" property="userName" />
@@ -19,6 +18,9 @@
         select * from user where userName like #{userName}
     </select>
 	
+	<select id="getUserArticlesTest" resultMap="resultListUser">
+		select * from `user`
+	</select>
 	
 	<!--执行增加操作的SQL语句。id和parameterType分别与IUserOperation接口中的addUser方法的名字和参数类型一致。以#{name}的形式引用Student参数  
        的name属性，MyBatis将使用反射读取Student参数的此属性。#{name}中name大小写敏感。引用其他的gender等属性与此一致。seGeneratedKeys设置  

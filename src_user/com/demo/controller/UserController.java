@@ -22,6 +22,7 @@ import com.demo.mybatis.model.Attribute;
 import com.demo.mybatis.model.Item;
 import com.demo.mybatis.model.Product;
 import com.demo.mybatis.model.TreeNode;
+import com.demo.mybatis.model.User;
 
 @Controller
 @RequestMapping("/article")
@@ -36,9 +37,12 @@ public class UserController {
 	public ModelAndView listall(HttpServletRequest request,
 			HttpServletResponse response) {
 		List<Article> articles = userMapper.getUserArticles(1);
-		// List<Article> articles = userDAO.getUserArticles(1);
+
+		List<User> users = userMapper.getUserArticlesTest();
+		//List<Article> articles = userDAO.getUserArticles(1);
 		ModelAndView mav = new ModelAndView("list");
 		mav.addObject("articles", articles);
+		mav.addObject("users", users);
 		return mav;
 	}
 

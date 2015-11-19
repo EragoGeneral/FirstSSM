@@ -80,7 +80,7 @@ public class Test {
     }
 	
 	/**
-     * ²âÊÔÔö¼Ó,Ôö¼Óºó£¬±ØÐëÌá½»ÊÂÎñ£¬·ñÔò²»»áÐ´Èëµ½Êý¾Ý¿â.
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½Óºó£¬±ï¿½ï¿½ï¿½ï¿½á½»ï¿½ï¿½ï¿½ñ£¬·ï¿½ï¿½ò²»»ï¿½Ð´ï¿½ëµ½ï¿½ï¿½Ý¿ï¿½.
      */
     public static void addUser(){
         User user=new User();
@@ -92,14 +92,14 @@ public class Test {
             IUserOperation userOperation=session.getMapper(IUserOperation.class);
             userOperation.addUser(user);
             session.commit();
-            System.out.println("µ±Ç°Ôö¼ÓµÄÓÃ»§ idÎª:"+user.getId());
+            System.out.println("ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Óµï¿½ï¿½Ã»ï¿½ idÎª:"+user.getId());
         } finally {
             session.close();
         }
     }
     
     public static void updateUser(User user){
-        //ÏÈµÃµ½ÓÃ»§,È»ºóÐÞ¸Ä£¬Ìá½»¡£
+        //ï¿½ÈµÃµï¿½ï¿½Ã»ï¿½,È»ï¿½ï¿½ï¿½Þ¸Ä£ï¿½ï¿½á½»ï¿½ï¿½
         SqlSession session = sqlSessionFactory.openSession();
         try {
             IUserOperation userOperation=session.getMapper(IUserOperation.class);
@@ -111,7 +111,7 @@ public class Test {
     }
     
     /**
-     * É¾³ýÊý¾Ý£¬É¾³ýÒ»¶¨Òª commit.
+     * É¾ï¿½ï¿½ï¿½ï¿½Ý£ï¿½É¾ï¿½ï¿½Ò»ï¿½ï¿½Òª commit.
      * @param id
      */
     public static void deleteUser(int id){
@@ -132,7 +132,7 @@ public class Test {
             List<Article> articles = userOperation.getUserArticles(userid);
             for(Article article:articles){
                 System.out.println(article.getTitle()+":"+article.getContent()+
-                        ":×÷ÕßÊÇ:"+article.getUser().getUserName()+":µØÖ·:"+
+                        ":ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:"+article.getUser().getUserName()+":ï¿½ï¿½Ö·:"+
                          article.getUser().getUserAddress());
             }
         } finally {

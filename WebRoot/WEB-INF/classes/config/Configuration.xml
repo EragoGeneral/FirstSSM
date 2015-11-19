@@ -4,7 +4,8 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="User" type="com.demo.mybatis.model.User" />
-		<typeAlias alias="Article" type="com.demo.mybatis.model.Article" />
+		<typeAlias alias="Article" type="com.demo.mybatis.model.Article" />		
+		<typeAlias alias="Menu" type="com.demo.mybatis.model.SystemMenus" />
 	</typeAliases>
 	<!-- 
 	<environments default="development">
