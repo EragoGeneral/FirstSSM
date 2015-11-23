@@ -10,7 +10,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="UTF-8">
-<title>模板管理</title>
+<title>系统主页面</title>
 
 <jsp:include page="../base/common.jsp" flush="true" />
 
@@ -38,7 +38,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
             data:"{}",  
             dataType:'json',  
             success:function (data) {
-            	var farr = data[0].children;                
+            	/*var farr = data[0].children;                
                 $.each(farr,function(i,n){
                 	var sarr = n.children;
                 	var scontent = '';
@@ -52,7 +52,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
                         selected: true,
                         content: scontent,
                     });
-                });
+                });*/
             }  
         });  
 	});
@@ -100,7 +100,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 		style="width:220px;">
 		<!-- 子模块：模板管理 -->
 		<div id="menu" class="easyui-accordion" data-options="fit:true,border:false">
-			<!--  
+			  
 			<div title="客户管理" class="firstMenu">
 				<div><a href="javascript:addTab('tabId_list','list','/FirstSSM/article/list');">list</a>
 				</div>
@@ -125,7 +125,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 				<div><a	href="javascript:addTab('tabId_datagrid','datagrid模板','/FirstSSM/article/index');">datagrid</a>
 				</div>
 			</div>
-			-->
+			
 		</div>
 	</div>
 	<!-- 东部区域 -->

@@ -22,12 +22,12 @@ public class SystemController {
 	
 	@Autowired
 	IMenuOperation menuMapper;
-		
+			
 	@RequestMapping(value = "/menus")
 	public ModelAndView menus(){		
 //		List<SystemMenus> menus = new ArrayList<SystemMenus>();
 //		mv.addObject(menus);
-		
+				
 		ModelAndView mv = new ModelAndView();
 //		Map<String, Object> map = new HashMap<String, Object>();
 		List<SystemMenus> menus = menuMapper.querySystemMenus();

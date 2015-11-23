@@ -26,7 +26,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <br><br>
     
     <h2>DataGrid</h2>
-    <table class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
+    <!-- 
+        <table class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
 			data-options="singleSelect:true,collapsible:true,url:'<%=basePath%>/article/loadTable.json',method:'get'">
 		<thead>
 			<tr>
@@ -39,6 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</tr>
 		</thead>
 	</table>
+	-->
 	
 	<br><br>
 	
